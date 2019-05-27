@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        console.log({{ userid }},{{ usernick }})
+    </script>
+
+</head>
+<body>
+    <div>
+        <form action="{% url 'lrapp:emaillogic' %}" method="get">
+        <table>
+            <tr>
+                <td class="t">邮箱验证码</td>
+                <td>
+                    <input id="" name="input_email_check"  tabindex="3" class="text" maxlength="20" type="text">
+                    <input name="usernick" value="{{ usernick }}">
+                    <input name="userid" value="{{ userid }}">
+                    <input name="flag" value="{{ flag }}">
+{#                                        <span id="spn_repassword_ok" class="icon_wrong" style="display: none;"></span>#}
+{#										<span id="reptext"></span>#}
+                </td>
+            </tr>
+            <tr>
+                <input type="submit"value="提交">
+            </tr>
+        </table>
+            </form>
+    </div>
+</body>
+</html>
